@@ -26,10 +26,8 @@ def create_word_list(words, word, letter):
 
 # function to generate a random word with 7 unique letters
 def generate_word(words):
-    # create a list of words with 7 or more letters
-    long_words = [word for word in words if len(word) >= 7]
-    # from this, find the unique letters in each word and create a list of those with exactly 7 unique letters
-    seven_unique_letter_words = [word for word in long_words if len(set(word)) == 7]
+    # create a list of words with 7 unique letters
+    seven_unique_letter_words = [word for word in words if len(set(word)) == 7]
     # choose a random word from this list to be the baseline word for the game
     return random.choice(seven_unique_letter_words)
 
@@ -112,4 +110,5 @@ def main():
     print(f'The possible words were: {", ".join(sorted(possible_words))}.')
 
 if __name__ == '__main__':
+
     main()
