@@ -3,8 +3,8 @@
 # Then, it will select a random letter from this word to be the required letter.
 # The player must find as many words as possible that can be formed from the given letters,
 # including the required letter, and are at least 4 letters long.
-# This uses the words file from Unix - https://en.wikipedia.org/wiki/Words_(Unix)
-# but can be used with any list of words as a text file input.
+# This words well with the 'linuxwords.txt' file based on Unix words - https://en.wikipedia.org/wiki/Words_(Unix)
+# Another dictionary is the 'crosswd.txt' file from https://www.gutenberg.org/files/3201/3201-h/3201-h.htm
 
 # import the random module
 import random
@@ -45,9 +45,9 @@ def validate_word(word):
 
 # main function to run the game
 def main():
-    # read the word list using the Unix dictionary
+    # read the word list from a file
     # change this if using another list of words
-    with open('linuxwords.txt', 'r') as f:
+    with open('crosswd.txt', 'r') as f:
         words = f.read().splitlines()
     # remove proper nouns
     words = [word for word in words if word.islower()]
