@@ -4,6 +4,7 @@
 # The player must find as many words as possible that can be formed from the given letters,
 # including the required letter, and are at least 4 letters long.
 # This uses the words file from Unix - https://en.wikipedia.org/wiki/Words_(Unix)
+# but can be used with any list of words as a text file input.
 
 # import the random module
 import random
@@ -44,7 +45,8 @@ def validate_word(word):
 
 # main function to run the game
 def main():
-    # read the word list using the linux dictionary
+    # read the word list using the Unix dictionary
+    # change this if using another list of words
     with open('linuxwords.txt', 'r') as f:
         words = f.read().splitlines()
     # remove proper nouns
@@ -113,4 +115,5 @@ def main():
 if __name__ == '__main__':
 
     main()
+
 
