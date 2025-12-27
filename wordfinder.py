@@ -3,6 +3,7 @@
 # Then, it will select a random letter from this word to be the required letter.
 # The player must find as many words as possible that can be formed from the given letters,
 # including the required letter, and are at least 4 letters long.
+# This uses the words file from Unix - https://en.wikipedia.org/wiki/Words_(Unix)
 
 # import the random module
 import random
@@ -112,3 +113,4 @@ def main():
 if __name__ == '__main__':
 
     main()
+
