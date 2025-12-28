@@ -18,9 +18,9 @@ def create_word_list(words, word, letter):
     # check if each word contains the required letter and is made up of only letters from the random word
     for i in word_list:
         # only check words with the required letter
-        if letter in i.lower():
+        if letter in i:
             # check if all the letters in the word exist in the subset of letters from the selected word
-            if set(i.lower()).issubset(set(word.lower())):
+            if set(i).issubset(set(word)):
                 # add to the word set
                 possible_words.add(i)
     # return the list of words
