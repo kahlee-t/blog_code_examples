@@ -63,6 +63,8 @@ def main():
     foundWords = set()
     # create a variable to hold the unique letters of the word for shuffling
     shuffled = list(set(random_word))
+    # start with a shuffled version of the letters
+    random.shuffle(shuffled)
 
     print('Welcome to the Word Finder Game! Type \'quit!\' to exit, or \'shuffle!\' to mix up the letters.')
 
@@ -114,3 +116,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
