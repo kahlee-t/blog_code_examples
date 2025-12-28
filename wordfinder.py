@@ -47,7 +47,9 @@ def validate_word(word):
 def main():
     # read the word list from a file
     # change this if using another list of words
-    with open('crosswd.txt', 'r') as f:
+    word_file = 'crosswd.txt'
+    
+    with open(word_file, 'r') as f:
         words = f.read().splitlines()
     # remove proper nouns
     words = [word for word in words if word.islower()]
@@ -116,4 +118,5 @@ def main():
 
 if __name__ == '__main__':
     main()
+
 
